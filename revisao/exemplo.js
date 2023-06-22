@@ -1,3 +1,6 @@
+//digitaçao dos valores 
+//soma dos valores
+
 const leia = require("prompt-sync")()  //após instalar npm - lê apenas em texto
 
 let valor1 = 0

@@ -5,7 +5,15 @@
 let total = 0
 for(let x=1; x<=100; x++){
   if((x%2)==1 && (x%3)==0){
+     /*
+    if ((x%2)==1){
+        if((x%3)==0){
+            console.log(x)
+        }
+    }
+    */
     console.log(x)
+    //total = total + x
     total += x
     }
 }
