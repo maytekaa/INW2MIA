@@ -19,9 +19,14 @@ loginButton.addEventListener('click', () =>{
     const password = passwordField.value 
 
     firebase.auth().signInWithEmailAndPassword(email, password)
-        then((userCredential) => {
+    then((userCredential) =>{
             //Usuário logado com sucesso
             const user = userCredential.user
-            )                                                  
+            console.log("Usuário logado: ", user)
+    })                 
+    .catch((error)=> {
+        const errorMessage = error.message 
+        console.error("Erro de autenticação", errorMessage)
+    })                                 
         }
-})
+)
