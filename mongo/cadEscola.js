@@ -26,25 +26,31 @@ const alunoSchema = new mongoose.Schema({
     turma: String
 })
 
-const Aluno = mongoose.model('Aluno', alunoSchema);
+const Alunos = mongoose.model('Alunos', alunoSchema);
 
-const paulo = new Aluno({
+const paulo = new Alunos({
     matricula: 'rm201',
-    nome: 'Paulo',
+    nome: "Paulo",
     idade: 18,
     turma: '2MIA'
 });
 
-const maria = new Aluno({
+paulo.save()
+
+const maria = new Alunos({
     matricula: 'rm202',
-    nome: 'Maria',
+    nome: "Maria",
     idade: 17,
     turma: '2MIB'
 });
 
-paulo.save()
 maria.save()
 
-Aluno.findOne({nome: 'Maria Clara'}, function(err,aluno){
-    console.log(Aluno)
-})
+const marcos = new Alunos({
+    matricula: 'rm201',
+    nome: "Marcos",
+    idade: 18,
+    turma: '2MIA'
+});
+
+marcos.save()
